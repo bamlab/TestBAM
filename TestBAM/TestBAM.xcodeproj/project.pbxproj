@@ -24,6 +24,9 @@
 		A990B5FE24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5FD24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift */; };
 		A990B60024A0E0E600586AC5 /* BAMRepoProviderMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */; };
 		A990B60224A0E35400586AC5 /* GithubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60124A0E35400586AC5 /* GithubAPITests.swift */; };
+		A990B60524A0E6A000586AC5 /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A990B60424A0E6A000586AC5 /* EmptyTableView.xib */; };
+		A990B60724A0E6B500586AC5 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60624A0E6B500586AC5 /* EmptyTableView.swift */; };
+		A990B60A24A0E72100586AC5 /* NibInstanciable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60924A0E72100586AC5 /* NibInstanciable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		A990B5FD24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAPIMocks.swift; sourceTree = "<group>"; };
 		A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAMRepoProviderMocks.swift; sourceTree = "<group>"; };
 		A990B60124A0E35400586AC5 /* GithubAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPITests.swift; sourceTree = "<group>"; };
+		A990B60424A0E6A000586AC5 /* EmptyTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
+		A990B60624A0E6B500586AC5 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
+		A990B60924A0E72100586AC5 /* NibInstanciable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstanciable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				A990B5F224A0DA8000586AC5 /* Network */,
 				A990B5EF24A0D6C500586AC5 /* Providers */,
 				A990B5EE24A0D6BD00586AC5 /* Models */,
+				A990B60324A0E68400586AC5 /* Views */,
 				A990B5ED24A0D6B400586AC5 /* Controllers */,
 				A990B5BA24A0D64800586AC5 /* AppDelegate.swift */,
 				A990B5BC24A0D64800586AC5 /* SceneDelegate.swift */,
@@ -165,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				A990B5F024A0DA4400586AC5 /* RepoModel.swift */,
+				A990B60924A0E72100586AC5 /* NibInstanciable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +200,15 @@
 				A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A990B60324A0E68400586AC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A990B60424A0E6A000586AC5 /* EmptyTableView.xib */,
+				A990B60624A0E6B500586AC5 /* EmptyTableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A990B5CA24A0D64A00586AC5 /* LaunchScreen.storyboard in Resources */,
+				A990B60524A0E6A000586AC5 /* EmptyTableView.xib in Resources */,
 				A990B5C724A0D64A00586AC5 /* Assets.xcassets in Resources */,
 				A990B5C224A0D64800586AC5 /* Main.storyboard in Resources */,
 			);
@@ -331,7 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A990B60A24A0E72100586AC5 /* NibInstanciable.swift in Sources */,
 				A990B5C524A0D64800586AC5 /* TestBAM.xcdatamodeld in Sources */,
+				A990B60724A0E6B500586AC5 /* EmptyTableView.swift in Sources */,
 				A990B5F424A0DA8C00586AC5 /* GithubAPI.swift in Sources */,
 				A990B5BF24A0D64800586AC5 /* ViewController.swift in Sources */,
 				A990B5BB24A0D64800586AC5 /* AppDelegate.swift in Sources */,
@@ -446,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

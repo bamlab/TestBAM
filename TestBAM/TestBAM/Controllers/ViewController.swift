@@ -10,6 +10,8 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
 
+  private let noDataView = EmptyTableView()
+
   /******************** Parameters ********************/
 
   let provider = BAMReposProvider()
@@ -33,11 +35,14 @@ class ViewController: UIViewController {
     setupTableView()
     setupRefreshControl()
     setupProvider()
+    showNoDataView(false)
   }
 
   private func setupTableView() {
     tableView.delegate = self
     tableView.dataSource = self
+
+    tableView.backgroundView = noDataView
   }
 
   private func setupRefreshControl() {
@@ -59,6 +64,11 @@ class ViewController: UIViewController {
 
   @objc private func refreshData() {
     provider.getBAMRepositories()
+  }
+
+  private func showNoDataView(_ hasNoData: Bool) {
+    self.tableView.backgroundView?.isHidden = !hasNoData
+    self.tableView.separatorStyle = hasNoData ? .none : .singleLine
   }
 }
 
@@ -91,10 +101,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: BAMReposProviderDelegate, BAMReposProviderView {
   func didGetRepositories(_ list: [RepoModel]) {
     self.list = list
+    showNoDataView(false)
   }
 
   func didFailGetRepositories() {
-    // TODO
+    self.list = []
+    showNoDataView(true)
   }
 
   func startLoadingRepositories() {
