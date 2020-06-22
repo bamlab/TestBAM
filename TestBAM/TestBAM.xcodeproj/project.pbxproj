@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,14 @@
 		A990B5CA24A0D64A00586AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A990B5C824A0D64A00586AC5 /* LaunchScreen.storyboard */; };
 		A990B5D524A0D64A00586AC5 /* TestBAMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5D424A0D64A00586AC5 /* TestBAMTests.swift */; };
 		A990B5E024A0D64A00586AC5 /* TestBAMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5DF24A0D64A00586AC5 /* TestBAMUITests.swift */; };
+		A990B5F124A0DA4400586AC5 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5F024A0DA4400586AC5 /* RepoModel.swift */; };
+		A990B5F424A0DA8C00586AC5 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5F324A0DA8C00586AC5 /* GithubAPI.swift */; };
+		A990B5F724A0DAE500586AC5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A990B5F624A0DAE500586AC5 /* Alamofire */; };
+		A990B5F924A0DCE400586AC5 /* BAMReposProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5F824A0DCE400586AC5 /* BAMReposProvider.swift */; };
+		A990B5FB24A0DEF300586AC5 /* BAMReposProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5FA24A0DEF300586AC5 /* BAMReposProviderTests.swift */; };
+		A990B5FE24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5FD24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift */; };
+		A990B60024A0E0E600586AC5 /* BAMRepoProviderMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */; };
+		A990B60224A0E35400586AC5 /* GithubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60124A0E35400586AC5 /* GithubAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,13 @@
 		A990B5DB24A0D64A00586AC5 /* TestBAMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBAMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A990B5DF24A0D64A00586AC5 /* TestBAMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBAMUITests.swift; sourceTree = "<group>"; };
 		A990B5E124A0D64A00586AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A990B5F024A0DA4400586AC5 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		A990B5F324A0DA8C00586AC5 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		A990B5F824A0DCE400586AC5 /* BAMReposProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAMReposProvider.swift; sourceTree = "<group>"; };
+		A990B5FA24A0DEF300586AC5 /* BAMReposProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAMReposProviderTests.swift; sourceTree = "<group>"; };
+		A990B5FD24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAPIMocks.swift; sourceTree = "<group>"; };
+		A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAMRepoProviderMocks.swift; sourceTree = "<group>"; };
+		A990B60124A0E35400586AC5 /* GithubAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A990B5F724A0DAE500586AC5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +117,12 @@
 		A990B5B924A0D64800586AC5 /* TestBAM */ = {
 			isa = PBXGroup;
 			children = (
+				A990B5F224A0DA8000586AC5 /* Network */,
+				A990B5EF24A0D6C500586AC5 /* Providers */,
+				A990B5EE24A0D6BD00586AC5 /* Models */,
+				A990B5ED24A0D6B400586AC5 /* Controllers */,
 				A990B5BA24A0D64800586AC5 /* AppDelegate.swift */,
 				A990B5BC24A0D64800586AC5 /* SceneDelegate.swift */,
-				A990B5BE24A0D64800586AC5 /* ViewController.swift */,
 				A990B5C024A0D64800586AC5 /* Main.storyboard */,
 				A990B5C624A0D64A00586AC5 /* Assets.xcassets */,
 				A990B5C824A0D64A00586AC5 /* LaunchScreen.storyboard */,
@@ -116,8 +135,11 @@
 		A990B5D324A0D64A00586AC5 /* TestBAMTests */ = {
 			isa = PBXGroup;
 			children = (
+				A990B5FC24A0DF7300586AC5 /* Mocks */,
 				A990B5D424A0D64A00586AC5 /* TestBAMTests.swift */,
 				A990B5D624A0D64A00586AC5 /* Info.plist */,
+				A990B5FA24A0DEF300586AC5 /* BAMReposProviderTests.swift */,
+				A990B60124A0E35400586AC5 /* GithubAPITests.swift */,
 			);
 			path = TestBAMTests;
 			sourceTree = "<group>";
@@ -129,6 +151,47 @@
 				A990B5E124A0D64A00586AC5 /* Info.plist */,
 			);
 			path = TestBAMUITests;
+			sourceTree = "<group>";
+		};
+		A990B5ED24A0D6B400586AC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A990B5BE24A0D64800586AC5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A990B5EE24A0D6BD00586AC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A990B5F024A0DA4400586AC5 /* RepoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A990B5EF24A0D6C500586AC5 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				A990B5F824A0DCE400586AC5 /* BAMReposProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		A990B5F224A0DA8000586AC5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A990B5F324A0DA8C00586AC5 /* GithubAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A990B5FC24A0DF7300586AC5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A990B5FD24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift */,
+				A990B5FF24A0E0E600586AC5 /* BAMRepoProviderMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +210,9 @@
 			dependencies = (
 			);
 			name = TestBAM;
+			packageProductDependencies = (
+				A990B5F624A0DAE500586AC5 /* Alamofire */,
+			);
 			productName = TestBAM;
 			productReference = A990B5B724A0D64800586AC5 /* TestBAM.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +285,9 @@
 				Base,
 			);
 			mainGroup = A990B5AE24A0D64800586AC5;
+			packageReferences = (
+				A990B5F524A0DAE500586AC5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A990B5B824A0D64800586AC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,8 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A990B5C524A0D64800586AC5 /* TestBAM.xcdatamodeld in Sources */,
+				A990B5F424A0DA8C00586AC5 /* GithubAPI.swift in Sources */,
 				A990B5BF24A0D64800586AC5 /* ViewController.swift in Sources */,
 				A990B5BB24A0D64800586AC5 /* AppDelegate.swift in Sources */,
+				A990B5F124A0DA4400586AC5 /* RepoModel.swift in Sources */,
+				A990B5F924A0DCE400586AC5 /* BAMReposProvider.swift in Sources */,
 				A990B5BD24A0D64800586AC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A990B5D524A0D64A00586AC5 /* TestBAMTests.swift in Sources */,
+				A990B5FE24A0DF8B00586AC5 /* RepositoriesAPIMocks.swift in Sources */,
+				A990B5FB24A0DEF300586AC5 /* BAMReposProviderTests.swift in Sources */,
+				A990B60224A0E35400586AC5 /* GithubAPITests.swift in Sources */,
+				A990B60024A0E0E600586AC5 /* BAMRepoProviderMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A990B5F524A0DAE500586AC5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A990B5F624A0DAE500586AC5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A990B5F524A0DAE500586AC5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A990B5C324A0D64800586AC5 /* TestBAM.xcdatamodeld */ = {
