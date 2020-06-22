@@ -5,7 +5,7 @@ class GithubAPITests: XCTestCase {
 
   func testGithubAPIGetRepositories() {
     let api = GithubAPI()
-    let expectation = XCTestExpectation(description: "Fet repositories")
+    let expectation = XCTestExpectation(description: "Get repositories")
 
     // When
     api.getRepositories(forOrganisation: "bamlab") { repoList in

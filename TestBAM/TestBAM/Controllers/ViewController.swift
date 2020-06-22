@@ -12,13 +12,17 @@ class ViewController: UIViewController {
 
   private let noDataView = EmptyTableView()
 
-  /******************** Parameters ********************/
+  /******************** Provider ********************/
 
-  let provider = BAMReposProvider()
+  let repositoriesProvider = BAMReposProvider()
+
+  /******************** Content ********************/
 
   var list: [RepoModel] = [] {
     didSet { tableView.reloadData() }
   }
+
+  private var favorites: [String] = []
 
   //----------------------------------------------------------------------------
   // MARK: - View life cycle
@@ -28,7 +32,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     setup()
 
-    provider.getBAMRepositories()
+    repositoriesProvider.getBAMRepositories()
+    favorites = FavoritesProvider.shared.getFavorites()
   }
 
   private func setup() {
@@ -54,8 +59,8 @@ class ViewController: UIViewController {
   }
 
   private func setupProvider() {
-    provider.delegate = self
-    provider.view = self
+    repositoriesProvider.delegate = self
+    repositoriesProvider.view = self
   }
 
   //----------------------------------------------------------------------------
@@ -63,7 +68,7 @@ class ViewController: UIViewController {
   //----------------------------------------------------------------------------
 
   @objc private func refreshData() {
-    provider.getBAMRepositories()
+    repositoriesProvider.getBAMRepositories()
   }
 
   private func showNoDataView(_ hasNoData: Bool) {
@@ -89,8 +94,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     let repo = list[indexPath.row]
     cell.textLabel?.text = repo.name
     cell.detailTextLabel?.text = repo.url
+    cell.detailTextLabel?.numberOfLines = 0
+    cell.accessoryType = favorites.contains(repo.name) ? .checkmark : .none
 
     return cell
+  }
+
+  func tableView(_ tableView: UITableView,
+                 didSelectRowAt indexPath: IndexPath) {
+    let repo = list[indexPath.row]
+
+    if favorites.contains(repo.name) {
+      FavoritesProvider.shared.removeFavorite(repo.name)
+    } else {
+      FavoritesProvider.shared.addFavorite(repo.name)
+    }
+
+    favorites = FavoritesProvider.shared.getFavorites()
+    tableView.reloadData()
   }
 }
 

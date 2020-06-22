@@ -27,6 +27,7 @@
 		A990B60524A0E6A000586AC5 /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A990B60424A0E6A000586AC5 /* EmptyTableView.xib */; };
 		A990B60724A0E6B500586AC5 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60624A0E6B500586AC5 /* EmptyTableView.swift */; };
 		A990B60A24A0E72100586AC5 /* NibInstanciable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990B60924A0E72100586AC5 /* NibInstanciable.swift */; };
+		A9D3BF3F24A0EF3D00E2CF40 /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3BF3E24A0EF3D00E2CF40 /* FavoritesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A990B60424A0E6A000586AC5 /* EmptyTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
 		A990B60624A0E6B500586AC5 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		A990B60924A0E72100586AC5 /* NibInstanciable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstanciable.swift; sourceTree = "<group>"; };
+		A9D3BF3E24A0EF3D00E2CF40 /* FavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				A990B5F824A0DCE400586AC5 /* BAMReposProvider.swift */,
+				A9D3BF3E24A0EF3D00E2CF40 /* FavoritesProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				A990B5C524A0D64800586AC5 /* TestBAM.xcdatamodeld in Sources */,
 				A990B60724A0E6B500586AC5 /* EmptyTableView.swift in Sources */,
 				A990B5F424A0DA8C00586AC5 /* GithubAPI.swift in Sources */,
+				A9D3BF3F24A0EF3D00E2CF40 /* FavoritesProvider.swift in Sources */,
 				A990B5BF24A0D64800586AC5 /* ViewController.swift in Sources */,
 				A990B5BB24A0D64800586AC5 /* AppDelegate.swift in Sources */,
 				A990B5F124A0DA4400586AC5 /* RepoModel.swift in Sources */,
